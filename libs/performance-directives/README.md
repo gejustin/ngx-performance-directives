@@ -1,6 +1,7 @@
-# DeferredDirectives
+# ngx-performance-directives
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
+## Overview
+Angular directives and utilities for developing performant Angular applications. Provides Angular wrappers around native APIs to make it easy to use things like requestAnimationFrame, requestIdleCallback, IntersectionObserver, etc in Angular contexts.
 
 ## Code scaffolding
 
