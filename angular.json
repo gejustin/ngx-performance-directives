@@ -1,0 +1,84 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "",
+  "projects": {
+    "performance-directives": {
+      "root": "libs/performance-directives",
+      "sourceRoot": "libs/performance-directives/src",
+      "projectType": "library",
+      "prefix": "gej",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/performance-directives/tsconfig.lib.json",
+              "libs/performance-directives/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/performance-directives/jest.config.js",
+            "tsConfig": "libs/performance-directives/tsconfig.spec.json",
+            "setupFile": "libs/performance-directives/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "rxjs-idle-callback-scheduler": {
+      "root": "libs/rxjs-idle-callback-scheduler",
+      "sourceRoot": "libs/rxjs-idle-callback-scheduler/src",
+      "projectType": "library",
+      "prefix": "gej",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/rxjs-idle-callback-scheduler/tsconfig.lib.json",
+              "libs/rxjs-idle-callback-scheduler/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/rxjs-idle-callback-scheduler/jest.config.js",
+            "tsConfig": "libs/rxjs-idle-callback-scheduler/tsconfig.spec.json"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
+    }
+  },
+  "cli": {
+    "warnings": {
+      "typescriptMismatch": false,
+      "versionMismatch": false
+    },
+    "defaultCollection": "@nrwl/schematics"
+  },
+  "schematics": {
+    "@nrwl/schematics:application": {
+      "style": "scss"
+    },
+    "@nrwl/schematics:library": {
+      "style": "scss"
+    }
+  },
+  "defaultProject": "performance-directives"
+}

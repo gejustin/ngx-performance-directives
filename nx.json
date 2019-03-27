@@ -1,0 +1,18 @@
+{
+  "npmScope": "gej",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "performance-directives": {
+      "tags": ["gej"]
+    },
+    "rxjs-idle-callback-scheduler": {
+      "tags": []
+    }
+  }
+}
